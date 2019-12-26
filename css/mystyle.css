@@ -1,0 +1,15 @@
+body {
+    background-color: #ED2939;
+    background-image: url("../assets/confetti.gif");
+}
+
+.win {
+    background-image: url("../assets/congrats.gif");
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#control .hero-body .container img {
+    margin-top: 5px;
+    box-shadow: 15px 15px 15px 15px #ffd700;
+}
