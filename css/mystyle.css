@@ -9,7 +9,26 @@ body {
     background-repeat: no-repeat;
 }
 
-#control .hero-body .container img {
+#control .hero-body .container img:last-child {
     margin-top: 5px;
-    box-shadow: 15px 15px 15px 15px #ffd700;
+    box-shadow: 15px 15px 15px 15px #FFD700;
+}
+
+#tap {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#help-text{
+    color: #FFD700;
+    animation: blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0% { color: #FFD700; }
+    49% { color: transparent; }
+    50% { color: transparent; }
+    80% { color: #FFD700; }
 }

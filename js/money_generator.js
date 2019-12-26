@@ -10,6 +10,8 @@ var MoneyGenerator = function(control, options) {
 
     turn = new Audio('media/coin.wav'),
     congrats = new Audio('media/cheers.wav'),
+
+    isFirstRun = true,
     interval;
 
     options = options || {};
@@ -47,6 +49,13 @@ var MoneyGenerator = function(control, options) {
     }
 
     function start() {
+        var tap = document.getElementById("help-text");
+        if (!isFirstRun) {
+            tap.style.display = "none";
+        } else {
+            tap.innerHTML = "Click anywhere to stop..."
+        }
+
         if (!isRunning) {
             control.classList.remove("win");
             interval = setInterval(update, options.delay);
@@ -56,6 +65,8 @@ var MoneyGenerator = function(control, options) {
             pick();
         }
         isRunning = !isRunning;
+
+        isFirstRun = false;
     }
 
     function init() {
